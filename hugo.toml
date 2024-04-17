@@ -3,9 +3,11 @@ languageCode = 'en-us'
 title = 'e10s.github.io'
 
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
 favicon = "images/favicon.png"
+hideRSSLink = true
 
 [[menu.main]]
 name = "Home"
