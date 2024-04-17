@@ -1,3 +1,6 @@
 baseURL = 'https://e10s.github.io/'
 languageCode = 'en-us'
 title = 'e10s.github.io'
+[module]
+[[module.imports]]
+path = "github.com/maolonglong/hugo-simple"
