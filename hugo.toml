@@ -4,6 +4,15 @@ title = 'e10s.github.io'
 
 enableRobotsTXT = true
 
+[[menu.main]]
+name = "Home"
+pageRef = "/"
+weight = 10
+[[menu.main]]
+name = "Documents"
+pageRef = "/docs/"
+weight = 20
+
 [module]
 [[module.imports]]
 path = "github.com/maolonglong/hugo-simple"
