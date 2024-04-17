@@ -4,6 +4,9 @@ title = 'e10s.github.io'
 
 enableRobotsTXT = true
 
+[params]
+favicon = "images/favicon.png"
+
 [[menu.main]]
 name = "Home"
 pageRef = "/"
