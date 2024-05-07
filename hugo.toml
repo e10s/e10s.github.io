@@ -6,7 +6,6 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
-favicon = "images/favicon.png"
 hideRSSLink = true
 
 [outputFormats]
