@@ -31,12 +31,12 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.125.4
     steps:
       - name: Install Hugo CLI
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \
+          | jq -r '.assets[] | select(.name | test("hugo_extended_.+?_linux-amd64\\.deb")) | .browser_download_url' \
+          | xargs curl -Lo ${{ runner.temp }}/hugo.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
